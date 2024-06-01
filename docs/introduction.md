@@ -2,7 +2,7 @@
 
 ## Online demo
 
-<https://nestjs-boilerplate-test.herokuapp.com/docs>
+<https://nestjs-starter-test.herokuapp.com/docs>
 
 ## Features
 

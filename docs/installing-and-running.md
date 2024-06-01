@@ -16,7 +16,7 @@
 1. Clone repository
 
    ```bash
-   git clone --depth 1 https://github.com/artemshchirov/nestjs-boilerplate.git my-app
+   git clone --depth 1 https://github.com/artemshchirov/nestjs-starter.git my-app
    ```
 
 1. Go to folder, and copy `env-example` as `.env`.
@@ -71,7 +71,7 @@ If you want quick run your app, you can use following commands:
 1. Clone repository
 
    ```bash
-   git clone --depth 1 https://github.com/artemshchirov/nestjs-boilerplate.git my-app
+   git clone --depth 1 https://github.com/artemshchirov/nestjs-starter.git my-app
    ```
 
 1. Go to folder, and copy `env-example` as `.env`.

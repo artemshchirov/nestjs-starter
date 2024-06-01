@@ -98,12 +98,12 @@ For auth with external services or social networks you need:
 ## Auth via Facebook
 
 1. Go to https://developers.facebook.com/apps/creation/ and create a new app
-   <img alt="image" src="https://github.com/artemshchirov/nestjs-boilerplate/assets/6001723/05721db2-9d26-466a-ad7a-072680d0d49b">
+   <img alt="image" src="https://github.com/artemshchirov/nestjs-starter/assets/6001723/05721db2-9d26-466a-ad7a-072680d0d49b">
 
-   <img alt="image" src="https://github.com/artemshchirov/nestjs-boilerplate/assets/6001723/9f4aae18-61da-4abc-9304-821a0995a306">
+   <img alt="image" src="https://github.com/artemshchirov/nestjs-starter/assets/6001723/9f4aae18-61da-4abc-9304-821a0995a306">
 
 2. Go to `Settings` -> `Basic` and get `App ID` and `App Secret` from your app
-   <img alt="image" src="https://github.com/artemshchirov/nestjs-boilerplate/assets/6001723/b0fc7d50-4bc6-45d0-8b20-fda0b6c01ac2">
+   <img alt="image" src="https://github.com/artemshchirov/nestjs-starter/assets/6001723/b0fc7d50-4bc6-45d0-8b20-fda0b6c01ac2">
 3. Change `FACEBOOK_APP_ID` and `FACEBOOK_APP_SECRET` in `.env`
 
    ```text
@@ -139,7 +139,7 @@ For auth with external services or social networks you need:
 
 ### Video example
 
-https://github.com/artemshchirov/nestjs-boilerplate/assets/6001723/f6fdcc89-5ec6-472b-a6fc-d24178ad1bbb
+https://github.com/artemshchirov/nestjs-starter/assets/6001723/f6fdcc89-5ec6-472b-a6fc-d24178ad1bbb
 
 ## Logout
 

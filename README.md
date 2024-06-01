@@ -1,6 +1,6 @@
 # NestJS TypeScript REST API PrismaORM Starter
 
-![github action status](https://github.com/artemshchirov/nestjs-boilerplate/actions/workflows/docker-e2e.yml/badge.svg)
+![github action status](https://github.com/artemshchirov/nestjs-starter/actions/workflows/docker-e2e.yml/badge.svg)
 [![renovate](https://img.shields.io/badge/renovate-enabled-%231A1F6C?logo=renovatebot)](https://app.renovatebot.com/dashboard)
 
 ## Description <!-- omit in toc -->
@@ -12,6 +12,7 @@ NestJS REST API boilerplate for typical project
 ## Table of Contents <!-- omit in toc -->
 
 - [Features](#features)
+- [Todo](#todo)
 - [Quick run](#quick-run)
 - [Comfortable development](#comfortable-development)
 - [Links](#links)
@@ -37,10 +38,14 @@ NestJS REST API boilerplate for typical project
 - [x] Docker.
 - [x] CI (Github Actions).
 
+## Todo
+
+- [ ] Fix docker scripts and ci after moving to PrismaORM
+
 ## Quick run
 
 ```bash
-git clone --depth 1 https://github.com/artemshchirov/nestjs-boilerplate.git my-app
+git clone --depth 1 https://github.com/artemshchirov/nestjs-starter.git my-app
 cd my-app/
 cp env-example .env
 docker compose up -d
@@ -55,7 +60,7 @@ docker compose logs
 ## Comfortable development
 
 ```bash
-git clone --depth 1 https://github.com/artemshchirov/nestjs-boilerplate.git my-app
+git clone --depth 1 https://github.com/artemshchirov/nestjs-starter.git my-app
 cd my-app/
 cp env-example .env
 ```
@@ -72,6 +77,8 @@ docker compose up -d postgres adminer maildev
 
 ```bash
 npm install
+
+npm run env:local:up
 
 npm run db:migrate:dev
 

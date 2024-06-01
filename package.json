@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-boilerplate",
+  "name": "nestjs-starter",
   "version": "0.0.1",
   "description": "NestJS boilerplate. Auth, Prisma, Postgres, Mailing, I18N, Docker",
   "author": "Artem Shchirov",
