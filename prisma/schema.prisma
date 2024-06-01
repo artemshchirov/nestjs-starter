@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model File {
+  id   String @id @default(uuid())
+  path String
+  user User[]
+}
+
+model Forgot {
+  id        Int       @id @default(autoincrement())
+  hash      String
+  createdAt DateTime  @default(now())
+  deletedAt DateTime?
+  userId    Int?
+  user      User?     @relation(fields: [userId], references: [id])
+
+  @@index([hash])
+}
+
+model Migrations {
+  id        Int    @id @default(autoincrement())
+  timestamp BigInt
+  name      String
+}
+
+model Role {
+  id   Int    @id
+  name String
+  user User[]
+}
+
+model Session {
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  deletedAt DateTime?
+  userId    Int?
+  user      User?     @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}
+
+model Status {
+  id   Int    @id
+  name String
+  user User[]
+}
+
+model User {
+  id        Int           @id @default(autoincrement())
+  email     String?       @unique
+  password  String?
+  provider  AuthProviders @default(EMAIL)
+  socialId  String?
+  firstName String?
+  lastName  String?
+  hash      String?
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  deletedAt DateTime?
+  photoId   String?
+  roleId    Int?
+  statusId  Int?
+  forgot    Forgot[]
+  session   Session[]
+  file      File?         @relation(fields: [photoId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  role      Role?         @relation(fields: [roleId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  status    Status?       @relation(fields: [statusId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([firstName, socialId, hash, lastName])
+}
+
+enum AuthProviders {
+  EMAIL
+  FACEBOOK
+  GOOGLE
+  TWITTER
+  APPLE
+}
